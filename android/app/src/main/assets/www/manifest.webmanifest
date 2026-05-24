@@ -1,0 +1,18 @@
+{
+  "name": "حصن المسلم - كتاب الأذكار",
+  "short_name": "حصن المسلم",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f1df",
+  "theme_color": "#0f6b58",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">أذكار الصباح والمساء</title>
+  <desc id="desc">أيقونة درع تركوازي مع كلمة أذكار وشريط سفلي برتقالي.</desc>
+  <defs>
+    <linearGradient id="shieldOuter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fefefe" />
+      <stop offset="45%" stop-color="#cfcfcf" />
+      <stop offset="100%" stop-color="#7a7a7a" />
+    </linearGradient>
+    <linearGradient id="shieldInner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ff2ef" />
+      <stop offset="100%" stop-color="#078c8d" />
+    </linearGradient>
+    <linearGradient id="banner" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f39a00" />
+      <stop offset="100%" stop-color="#ffb100" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#00393a" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M256 18l182 58v165c0 118-72 214-182 253C146 455 74 359 74 241V76z" fill="url(#shieldOuter)" />
+    <path d="M256 44l156 49v145c0 98-58 179-156 216C158 417 100 336 100 238V93z" fill="#084f56" />
+    <path d="M256 58l140 45v132c0 88-52 160-140 194C168 395 116 323 116 235V103z" fill="url(#shieldInner)" />
+    <path d="M256 86l108 34v102c0 67-39 121-108 148C187 343 148 289 148 222V120z" fill="rgba(255,255,255,0.18)" />
+  </g>
+
+  <g transform="translate(0 12)">
+    <text
+      x="256"
+      y="220"
+      text-anchor="middle"
+      font-size="172"
+      font-weight="700"
+      font-family="'Noto Naskh Arabic', 'Segoe UI', serif"
+      fill="#06595b"
+      stroke="#ffffff"
+      stroke-width="16"
+      paint-order="stroke fill"
+    >
+      أذكار
+    </text>
+
+    <path d="M238 252c0-10 8-18 18-18h2c10 0 18 8 18 18v20c0 10-8 18-18 18h-2c-10 0-18-8-18-18z" fill="#ffffff" />
+    <path d="M258 252c0-3 2-5 5-5s5 2 5 5v20c0 3-2 5-5 5s-5-2-5-5z" fill="#06595b" />
+    <path d="M284 252c18 7 27 26 22 44" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+    <path d="M295 259c11 5 16 17 13 29" fill="none" stroke="#06595b" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(28 338)">
+    <path d="M16 8h424l-24 104H40z" fill="url(#banner)" />
+    <path d="M16 8L0 52l22 24 18-24z" fill="#d67f00" />
+    <path d="M440 8l16 44-22 24-18-24z" fill="#d67f00" />
+    <text
+      x="228"
+      y="80"
+      text-anchor="middle"
+      font-size="66"
+      font-weight="700"
+      font-family="'Noto Naskh Arabic', 'Segoe UI', serif"
+      fill="#ffffff"
+      stroke="#f59a00"
+      stroke-width="8"
+      paint-order="stroke fill"
+    >
+      الصباح والمساء
+    </text>
+  </g>
+</svg>

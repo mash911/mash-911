@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حصن المسلم | كتاب الأذكار</title>
+    <meta
+      name="description"
+      content="تطبيق أذكار عربي منظم يضم أذكار الصباح والمساء والنوم والاستيقاظ وأذكارًا صحيحة مختارة."
+    />
+    <meta name="theme-color" content="#0f6b58" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="splash-screen" id="splashScreen" aria-label="شاشة البداية">
+        <div class="splash-glow"></div>
+        <p class="splash-subtitle">حصن المسلم</p>
+        <h1 class="splash-title">كتاب الأذكار</h1>
+      </section>
+
+      <main class="app hidden" id="app">
+        <section class="screen active" id="homeScreen" aria-labelledby="homeTitle">
+          <header class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow">مرجع مختصر ومرتب</p>
+              <h2 id="homeTitle">كتاب الأذكار</h2>
+              <p class="hero-text">
+                اختر القسم الذي تريده، واقرأ الذكر مع عداد دائري يساعدك على إتمام العدد
+                والانتقال للذكر الذي بعده.
+              </p>
+            </div>
+            <div class="hero-badge">
+              <img src="./assets/icon.svg" alt="أيقونة حصن المسلم" />
+              <span>حصن المسلم</span>
+            </div>
+          </header>
+
+          <section class="categories-section" aria-labelledby="categoriesTitle">
+            <div class="section-title-row">
+              <h3 id="categoriesTitle">أقسام الأذكار</h3>
+              <span class="pill soft">اختر ما تريد</span>
+            </div>
+            <div class="categories-grid" id="categoriesGrid"></div>
+          </section>
+
+          <div class="action-row">
+            <button class="about-button" id="openReferencesButton" type="button">
+              المراجع
+            </button>
+            <button class="about-button" id="openAboutButton" type="button">
+              حول المطور
+            </button>
+          </div>
+        </section>
+
+        <section class="screen" id="categoryScreen" aria-live="polite">
+          <header class="screen-header">
+            <button class="back-button" id="backToHomeButton" type="button">
+              رجوع للقائمة الرئيسية
+            </button>
+            <div>
+              <p class="screen-kicker" id="categoryKicker"></p>
+              <h2 id="categoryTitle"></h2>
+            </div>
+          </header>
+
+          <article class="dhikr-card">
+            <div class="dhikr-meta">
+              <span class="dhikr-index" id="dhikrIndex"></span>
+              <span class="dhikr-count-label" id="dhikrCountLabel"></span>
+            </div>
+            <h3 class="dhikr-heading" id="dhikrHeading"></h3>
+            <p class="dhikr-text" id="dhikrText"></p>
+            <div class="dhikr-source">
+              <span>المصدر</span>
+              <a id="dhikrSourceLink" href="#" target="_blank" rel="noreferrer noopener"></a>
+            </div>
+            <p class="dhikr-note" id="dhikrNote"></p>
+          </article>
+
+          <footer class="counter-dock">
+            <div class="counter-progress" id="counterProgress" role="img" aria-label="عداد الذكر">
+              <button class="counter-button" id="counterButton" type="button">
+                <span class="counter-current" id="counterCurrent">0</span>
+                <span class="counter-target" id="counterTarget">/ 0</span>
+                <span class="counter-hint">اضغط للتسبيح</span>
+              </button>
+            </div>
+            <p class="counter-status" id="counterStatus">ابدأ بالضغط لإتمام الذكر.</p>
+          </footer>
+        </section>
+
+        <section class="screen" id="aboutScreen">
+          <header class="screen-header">
+            <button class="back-button" id="backFromAboutButton" type="button">
+              رجوع للقائمة الرئيسية
+            </button>
+            <div>
+              <p class="screen-kicker">حول المطور</p>
+              <h2>معلومات المطور</h2>
+            </div>
+          </header>
+
+          <article class="about-card">
+            <div class="about-avatar">أبو يحيى</div>
+            <h3>تطوير المبرمج أبو يحيى</h3>
+            <a class="about-email" href="mailto:saida.mash@gmail.com">saida.mash@gmail.com</a>
+            <p class="about-copy">لأي استفسار يرجى تسجيل طلب بالديوان مع 1 شاورما 2 عيران وشوكرن.</p>
+          </article>
+        </section>
+
+        <section class="screen" id="referencesScreen">
+          <header class="screen-header">
+            <button class="back-button" id="backFromReferencesButton" type="button">
+              رجوع للقائمة الرئيسية
+            </button>
+            <div>
+              <p class="screen-kicker">المراجع</p>
+              <h2>المراجع المعتمدة</h2>
+            </div>
+          </header>
+
+          <article class="references-card" aria-labelledby="referencesTitle">
+            <div class="section-title-row">
+              <h3 id="referencesTitle">مصادر التطبيق</h3>
+              <span class="pill">موثقة</span>
+            </div>
+            <p class="references-text">
+              هذه صفحة مستقلة للمراجع المعتمدة في ترتيب الأذكار وتوثيقها.
+            </p>
+            <div class="reference-links" id="referenceLinks"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
